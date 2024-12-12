@@ -9,10 +9,10 @@ NUM_CPUS = 2
 MEMORIA_RAM = 2048
 NOM_MAQUINA = "pj9f4a87-grup13"
 HOSTNAME = "pj9f4a87-grup13.fjeclot.net"
-CARPETA_MAQ_FIS1 = "../apl1/codi"
-CARPETA_MAQ_VIR1 = "/home/vagrant/pj9f4a87/apl1/codi"
-CARPETA_MAQ_FIS2 = "../apl2/codi"
-CARPETA_MAQ_VIR2 = "/home/vagrant/pj9f4a87/apl2/codi"
+CARPETA_MAQ_FIS1 = "../apl1/"
+CARPETA_MAQ_VIR1 = "/home/vagrant/pj9f4a87/apl1/"
+CARPETA_MAQ_FIS2 = "../apl2/"
+CARPETA_MAQ_VIR2 = "/home/vagrant/pj9f4a87/apl2/"
 
 # CONFIGURACIÓ DE LA MÀQUINA
 

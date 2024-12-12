@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2024-11-29" view-index="0" gantt-divider-location="456" resource-divider-location="300" version="3.2.3247" locale="es_ES">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nombre" width="259" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="97" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="99" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Part 1: Creació de l'estructura de carpetes" color="#8cb6ce" meeting="false" start="2024-12-05" duration="2" complete="0" thirdDate="2024-12-04" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[├── 1: Llegir la part 1 per saber què hem de fer i què necessitem lliurar al professorat. 
+├── 2: Consultar a la pàgina de collados per veure com ha de ser l'estructura dels directoris. 
+├── 3: Fer l'estructura dels direcoris tant de la maquina física com de la màquina virtual.
+├── 4: Fer l'estuctura dels directoris de la màquina fisica segons l'enunciat de la part 1.]]>
+            </notes>
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" name="Part 2: Creació de la màquina virtual" color="#8cb6ce" meeting="false" start="2024-12-09" duration="1" complete="0" thirdDate="2024-12-04" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[├── 1: Llegir l'enunciat de la part 2 per saber que s'ha de posar al fitxer Vagrantfile. 
+├── 2: Generar un fitxer Vagrantfile segons l'enunciat de la part 2. 
+├── 3: Iniciar la màquina virtual.
+├── 4: Fer el primer Commit local
+├── 5: Crear la documentació de la part 2]]>
+            </notes>
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" name="Part 3: Desplegament de l'aplicació 1" color="#8cb6ce" meeting="false" start="2024-12-10" duration="1" complete="0" thirdDate="2024-12-04" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[├── 1: Llegir l'enunciat de la part 3
+├── 2: ]]>
+            </notes>
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" name="Part 4: Desplegament de l'aplicació 2" color="#8cb6ce" meeting="false" start="2024-12-11" duration="2" complete="0" thirdDate="2024-12-04" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
