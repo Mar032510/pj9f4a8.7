@@ -1,14 +1,28 @@
-services:    
-  webphp_pizzeria: # L'etiqueta identificadora d'aquest servei dins de docker-compose.yml        
-    image: ipizzeria:1.0 # El nom que veurem quan fem docker images        
-    build: .        
-    container_name: cpizzeria # El nom que veurem quan fem docker ps -a 
-    ports:     
-      - "80:80"  # Primer el port del host i després el del contenidor 
-# Aquest docker-compose.yml: 
-# 1- Posa en marxa el servei webphp_pizzeria necessari per fer anar l'aplicació. Aquest 
-# servei utilitza un contenidor. Quan es faci un docker compose up es posarà en marxa 
-# aquest servei i els contenidor que necessita. 
-# 2- Crea una imatge de contenidor de nom ipizzera:1.0 
-# 3- Crea un contenidor de nom cpizzeria que utilitzant la imatge ipizzeria:1.0 
-# 4- El contenidor exposa el seu port 80 al port 80 de la màquina virtual
+version: '3.8'
+
+services:
+  apache:
+    image: httpd:latest
+    expose:
+      - "80"
+    volumes:
+      - ./codi/starship-sorades-13k:/usr/local/apache2/htdocs
+    networks:
+      - 13Pj9f4a87
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_loadbalancer
+    ports:
+      - "80:8000"
+    depends_on:
+      - apache
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - 13Pj9f4a87
+
+networks:
+  13Pj9f4a87:
+    name: Pj9f4a87
+    driver: bridge
