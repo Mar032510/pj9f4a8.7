@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  sMysql:
+    image: mysql:9.1
+    container_name: cMysql
+    expose:
+      - "3306:33306"
+    volumes:
+      - ./sql:/sql
+    environment: 
+      MYSQL_DATABASE: "bdPj9f4a87apl2"
+      MYSQL_USER: "asix2"
+      MYSQL_PASSWORD: "FjeClot2425#"
+      MYSQL_ROOT_PASSWORD: "FjeClot2425@"
+    networks:
+      - 13Pj9f4a87apl2
+  sWebApp:
+    image: iwebapp:1.0
+    container_name: cWebApp
+    build: .
+    ports:
+      - "80:8080"
+    depends_on:
+      - sMysql
+    volumes:
+      - ./app:/var/www/html 
+    networks:
+      - 13Pj9f4a87apl2
+networks:
+  13Pj9f4a87apl2:
+    name: pj9f4a87apl2
+    driver: bridge
+volumes:
+  vDades: 
+    name: dades
